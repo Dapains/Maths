@@ -6,7 +6,14 @@ while(num2 <0):
     num2 = int(input("enter a positive int"))
     
 while (num1*num2=0):
-    print(num1*num2)
+    amount = (num1*num2)
+    print(amount)
+    if (amount>100):
+        print("Wow thats big")
+    elif(amount == 13):
+        print("wow you enters 1 and 13")
+    else:
+        print("What,are you scared of big numbers")
     num1 = int(input("enter an int"))
     num2 = int(input("enter an interger"))
 print(0)
