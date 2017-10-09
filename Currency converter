@@ -20,6 +20,7 @@ def coinconvert():
                     print("Your fee is:", fee)
                 total = (amount * .78)
                 print ("Your total is:", total)
+                start = input("Enter your starting currency(Either CD,US EU) or quit to quit")
             if choice == "EU":
                 amount = int(input("Enter the amount you are converting"))
                 while amount <= 0:
@@ -35,6 +36,7 @@ def coinconvert():
                     print("Your fee is:", fee)
                 total = (amount * .78)
                 print ("Your total is:", total)
+                start = input("Enter your starting currency(Either CD,US EU)")
         elif start == "US":
             choice = input("What currency are you converting to?")
             while choice == "US":
@@ -53,7 +55,8 @@ def coinconvert():
                     fee = (amount * .01)
                     print("Your fee is:", fee)
                 total = (amount * 1.29)
-                print ("Your total is:", total)
+                print("Your total is:", total)
+                start = input("Enter your starting currency(Either CD,US EU)")
             if choice == "EU":
                 amount = int(input("Enter the amount you are converting"))
                 while amount <= 0:
@@ -68,7 +71,8 @@ def coinconvert():
                     fee = (amount * .01)
                     print("Your fee is:", fee)
                 total = (amount * .88)
-                print ("Your total is:", total)
+                print("Your total is:", total)
+                start = input("Enter your starting currency(Either CD,US EU)")
         if start == "EU":
             choice = input("What currency are you converting to?")
             while choice == "EU":
@@ -88,6 +92,7 @@ def coinconvert():
                     print("Your fee is:", fee)
                 total = (amount * 1.13)
                 print ("Your total is:", total)
+                start = input("Enter your starting currency(Either CD,US EU)")
             if choice == "CD":
                 amount = int(input("Enter the amount you are converting"))
                 while amount <= 0:
@@ -103,7 +108,10 @@ def coinconvert():
                     print("Your fee is:", fee)
                 total = (amount * 1.46)
                 print ("Your total is:", total)
-    else:
-        start = input("Enter your starting currency(Either CD,US EU)")
-    start = input("Enter your starting currency(Either CD,US EU)")
+                start = input("Enter your starting currency(Either CD,US EU)")
+        else:
+            start = input("Enter your starting currency(Either CD,US EU)")
+    if "quit" in start:
+        exit()
+
 coinconvert()
