@@ -11,6 +11,9 @@ def login():
     global password
     entry1 = input("Enter your username")
     entry2 = input("Enter your password")
+    while entry1 != username or entry2 != password:
+        entry1 = input("Enter your username")
+        entry2 = input("Enter your password")
     if entry1 == username and entry2 == password:
         choice = input("choose what you want to do withdraw, deposit, or logout to logout")
         while choice != "logout":
