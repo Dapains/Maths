@@ -1,3 +1,6 @@
+#Owen Matyi
+#10/9/2017
+#Currency conversion for US Canadaian and European currencies
 def coinconvert():
     start = input("Enter your starting currency(Either CD,US EU)")
     while start != "Quit":
