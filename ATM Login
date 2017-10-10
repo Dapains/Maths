@@ -1,0 +1,37 @@
+#Owen Matyi
+#10/7/2017
+#ATM Log in and check account
+
+
+def login():
+    username = input("enter a username")
+    password = input("enter a password")
+    entry1 = input("Enter your username")
+    entry2 = input("Enter your password")
+    total = 100
+    if entry1 == username and entry2 == password:
+        choice = input("choose what you want to do withdraw, deposit, or Logout to logout")
+        while choice != "Logout":
+            if choice == "deposit":
+                amount = int(input("How much would you like to deposit"))
+                while amount <= 0:
+                    amount = int(input("Enter a positive amount for your deposit"))
+                total += amount
+                print("your total is:",total)
+                choice = input("choose what you want to do or Quit to quit")
+            elif choice == "withdraw":
+                amount = int(input("How much would you like to withdraw"))
+                while amount <= 0:
+                    amount = int(input("Enter a positive amount for your withdrawl"))
+                    while amount > total:
+                        amount = int(input("Enter a positive amount for your withdrawl"))
+                total -= amount
+                print("your total is:",total)
+                choice = input("choose what you want to do or Quit to quit")
+            else:
+                choice = input("choose what you want to do or Quit to quit")
+        if choice == "Logout":
+            login()
+        elif choice == "quit":
+            exit(0)
+login()
